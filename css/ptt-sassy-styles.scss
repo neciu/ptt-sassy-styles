@@ -1,16 +1,7 @@
 @import "normalize";
 
-$background: #fffcd7;
-$menu: #b3b38d;
-$normal: #cccca5;
-$warning: #ffb852;
-$error: #ff2e0e;
-
-$darken-level-dark: 20%;
-$darken-level-drraaakula: 50%;
-
 html {
-  background: $background;
+  background: #fffcd7;
 }
 
 body {
@@ -21,66 +12,41 @@ body {
 
 section.top-bar {
   padding: 0;
-  background: $menu;
+  background: #b3b38d;
   margin-bottom: 10px;
 }
 
-$left-section-width: 25%;
-
 section.left-section {
   display: inline-block;
-  width: $left-section-width;
+  width: 25%;
   float: left;
-  background: $menu;
+  background: #b3b38d;
 
   padding: 4px;
-
-  ul {
-    margin: 0;
-    padding: 0;
-    li {
-      display: block;
-      background: $normal;
-      padding: 4px;
-      margin: 4px 10px;
-
-      &:hover {
-        font-weight: bold;
-      }
-    }
-  }
-}
-
-@mixin box-shadow($box-shadow) {
-  -webkit-box-shadow: $box-shadow;
-  -moz-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
 }
 
 section.right-section {
   display: inline-block;
   float: right;
-  width: 100% - $left-section-width - 4%;
-
-  .normal {
-    margin: 0 0 10px 0;
-    padding: 10px;
-    background: $normal;
-    @include box-shadow(4px 4px darken($normal, $darken-level-dark));
-  }
-
-  .error {
-    @extend .normal;
-    background: $error;
-    @include box-shadow(4px 4px darken($error, $darken-level-dark));
-    color: darken($error, $darken-level-drraaakula);
-  }
-
-  .warning {
-    @extend .normal;
-    background: $warning;
-    @include box-shadow(4px 4px darken($warning, $darken-level-dark));
-    color: darken($warning, $darken-level-drraaakula);
-  }
+  width: 50%;
 }
+
+section.right-section .normal {
+  margin: 0 0 10px 0;
+  padding: 10px;
+  background: #b3b38d;
+}
+
+section.right-section .error {
+  margin: 0 0 10px 0;
+  padding: 10px;
+  background: #b3b38d;
+}
+
+section.right-section .warning {
+  margin: 0 0 10px 0;
+  padding: 10px;
+  background: #b3b38d;
+}
+
 
